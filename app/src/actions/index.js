@@ -11,6 +11,7 @@ export const getData = () => {
           axios
           .get('https://covid-api.mmediagroup.fr/v1/cases')
           .then(res => {
+               console.log(res.data)
                dispatch({type:FETCH_DATA_SUCCESS, payload:res.data})
           })
           .catch(err => {

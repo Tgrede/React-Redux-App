@@ -1,7 +1,7 @@
 import {FETCH_DATA_FAIL, FETCH_DATA_LOADING, FETCH_DATA_SUCCESS} from './../actions/index'
 
 const initialState = {
-     data: null,
+     data: {US: 'Loading'},
      isFetching: false,
      error: ''
 }
@@ -11,6 +11,7 @@ export const reducer = (state = initialState, action) => {
           case(FETCH_DATA_LOADING):
                return({
                     ...state,
+
                     isFetching: true
                })
           case(FETCH_DATA_SUCCESS):
